@@ -1,0 +1,28 @@
+//responsive
+
+@mixin maxdesktop {
+  @media screen and (max-width: 1580px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: 1020px) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin portret {
+  @media screen and (orientation:portrait) {
+    @content;
+  }
+}
+
+
+  

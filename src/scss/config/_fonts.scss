@@ -1,0 +1,26 @@
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "gerbera"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/GerberaBold.woff") format("truetype"); 
+    font-style: normal; 
+    font-weight: 900; 
+} 
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "gerbera"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/GerberaMedium.woff") format("truetype"); 
+    font-style: normal; 
+    font-weight: 700; 
+} 
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "gerbera"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/GerberaLight.woff") format("truetype"); 
+    font-style: normal; 
+    font-weight: 500; 
+} 

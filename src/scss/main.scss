@@ -1,0 +1,320 @@
+@import "normalize";
+@import "../../node_modules/singularitygs/stylesheets/singularitygs";
+
+//fonts
+@import "config/_fonts";
+
+// Config
+@import "config/_mixins";
+//@import "config/sprite";
+
+html{    
+    height: 100%;
+
+   // background-color: red;
+}
+
+a{
+        color: white;
+        text-decoration: none !important;
+
+}
+
+p{
+        padding: 0;
+        margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'gerbera', monospace;
+    height: 100%;
+    width: 100%;
+    color:white;
+    font-size: 14px;
+
+    background-color: #C0DBA1;
+    @include portret{
+        background-color: #92C24D;
+    } 
+    
+}
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+  }
+
+
+.boxercontainer{    
+    z-index: 0;
+    display: flex;
+    margin: 0 auto;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.col{     
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-size:110% auto !important;
+
+
+        @include maxdesktop{
+           background-size:  auto !important;
+        }
+
+        @include portret{
+                background-size:110% auto !important;
+        }
+
+}
+
+
+
+#col1{        
+        background: url(../img/l1.svg) no-repeat;  
+        
+        @include maxdesktop{
+                background: url(../img/l1-maxdesktop.svg) no-repeat; 
+                background-position-y: 100%;
+                background-position-x: 50%;
+        }
+
+        @include desktop{
+                background: url(../img/l1-desktop.svg) no-repeat; 
+                background-position-y: 100%;
+                background-position-x: 50%;
+        }
+
+        @include portret{
+                background: none; 
+                
+        }
+        
+      /*  background-size:100% 100% !important; */
+      background-position-y: 100%;
+      background-position-x: 50%;
+
+}
+
+
+#col2{        
+        background: url(../img/l2.svg) no-repeat;  
+        @include maxdesktop{
+                background: url(../img/l2-maxdesktop.svg) no-repeat; 
+                background-position-y: 100%;
+                background-position-x: 50%;
+        }
+
+        @include desktop{
+                background: url(../img/l2-desktop.svg) no-repeat; 
+                background-position-y: 100%;
+                background-position-x: 50%;
+        }
+
+        @include portret{
+                background: url(../img/l2-mobile.svg) no-repeat; 
+                background-position-y: 55%;
+                background-position-x: 90%;
+                background-size:170% auto !important;
+                
+        }
+       /* background-size:100% auto !important; */
+       background-position-y: 100%;
+       background-position-x: 50%;  
+}
+
+
+
+#col3{       
+        @include portret{
+                background: url(../img/l3-mobile.svg) no-repeat;                 
+                background-position-x: center;
+                background-position-y: 80%;
+                background-size:80% auto !important;
+
+        } 
+        background: url(../img/l3.svg) no-repeat;    
+        background-position-y: 110%;
+        background-position-x: 50%;
+}
+
+
+
+#col4{   
+           
+        background: url(../img/l4.svg) no-repeat;    
+        background-position-y: 110%;
+        background-position-x: 50%;
+        @include desktop{
+                background: url(../img/l4-desktop.svg) no-repeat; 
+                background-position-y: 100%;
+                background-position-x: 50%;
+        }
+
+        @include portret{
+                background: url(../img/l4-mobile.svg) no-repeat; 
+                background-position-y: 100%;
+                background-position-x: 135%;
+                background-size:80% auto !important;
+        }  
+}
+
+
+
+
+
+.container{
+    overflow: hidden;
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-size: auto 100%;  
+    height: 100%;
+    width: 100%;  
+    flex-flow: column;   
+    justify-content: center;
+
+    @include phones{
+        padding-right: 15%;
+        padding-left: 15%;
+    }  
+
+    .logo{
+        @include phones{
+                padding-top: 30%;                
+        }
+
+        @include maxdesktop{
+                width: 350px;
+        }
+
+        max-width: 90%;
+            img{
+                    max-width: 100%;
+            }
+    }
+
+    .ticket{
+        padding-bottom: 45px;  
+        @include maxdesktop{
+                padding-bottom: 25px;
+                img{
+                        width: 200px;       
+                }  
+        }
+    }
+
+    .social{
+        text-align: center;
+        display: flex;    
+        flex-flow: row;  
+        width: 100%;
+        justify-content: center;
+        flex-wrap: nowrap;
+        max-width: 750px;
+        padding-top: 45px;
+        padding-bottom: 45px;
+
+        
+
+        p{
+                margin-top:25px; 
+        }
+
+        @include phones{
+                padding-top: 25px;
+                padding-bottom: 25px;
+        }  
+
+        .social__img{
+                &:last-child{
+                        margin-left: -24px;
+                        @include phones{
+                                margin-left: 0;
+                        }  
+                }
+
+                padding: 2%;
+                @include phones{
+                        padding: 3%;
+                } 
+                img{
+                        width: 80px;
+                        @include phones{
+                                width: 100%;
+                        }  
+                }
+        }   
+    }
+    
+}
+
+.mob{
+        @include phones{
+                display:none;
+        }    
+}
+
+.vamkuda{
+        font-size: 50px;
+        font-weight: 900;
+        
+        @include maxdesktop{
+                font-size: 35px;
+        }
+
+        @include phones{
+                font-size: 25px;
+        }    
+}
+
+.krestik1{  
+        animation-name: pulse;  
+        animation-duration: 2.1s;  
+        animation-iteration-count: infinite;  
+      }  
+      @keyframes pulse {  
+        0% {  
+        transform: scale(1);  
+        }  
+        50% {  
+        transform: scale(0.9); 
+        }  
+        100% {  
+        transform: scale(1);  
+        }  
+}
+
+.deg{
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        transform:rotate(-15deg); 
+}
+
+.krestik2{
+        position: absolute;
+        top: 57%;
+        right: 12%;
+
+        animation-name: pulse;  
+        animation-duration: 2.1s;  
+        animation-iteration-count: infinite;  
+      }  
+      @keyframes pulse {  
+        0% {  
+        transform: scale(0.92);  
+        }  
+        50% {  
+        transform: scale(1);  
+        }  
+        100% {  
+        transform: scale(0.92);  
+        }  
+}
